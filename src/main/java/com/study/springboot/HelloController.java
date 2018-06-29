@@ -1,6 +1,7 @@
 package com.study.springboot;
 
 import com.config.Student;
+import com.config.TestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,6 +26,8 @@ public class HelloController {
     @Autowired
     private Student student;
 
+    @Autowired
+    private TestConfig testConfig;
    // @Value("${name}")
     //private String servername;
 
@@ -37,6 +40,6 @@ public class HelloController {
     public String hello() throws UnsupportedEncodingException {
         //System.out.println(new String(servername.getBytes("iso8859-1"),"utf-8"));
         System.out.println(student.getName());
-        return "";
+        return testConfig.getAge()+"";
     }
 }
