@@ -15,4 +15,7 @@ import org.apache.ibatis.annotations.Select;
 public interface AccountMapper {
     @Select("select id, name as name, money as money from account where id = #{id}")
     Account findAccount(@Param("id") int id);
+
+    Account findAccountById(int id);
+
 }

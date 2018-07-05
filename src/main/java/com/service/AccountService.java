@@ -20,4 +20,8 @@ public class AccountService {
     public Account findAccount(int id){
         return accountMapper.findAccount(id);
     }
+
+    public Account findAccountById(int id){
+        return accountMapper.findAccountById(id);
+    }
 }
