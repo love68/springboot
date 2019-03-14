@@ -1,12 +1,14 @@
 package com.bean;
 
+import java.io.Serializable;
+
 /**
  * Account
  *
  * @author jiajunkang
  * @version 1.0.0
  **/
-public class Account {
+public class Account implements Serializable{
     private int id;
     private String name;
 

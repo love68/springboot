@@ -1,9 +1,12 @@
 package com.Mapper;
 
 import com.bean.Account;
+import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * AccountMapper
@@ -18,4 +21,6 @@ public interface AccountMapper {
 
     Account findAccountById(int id);
 
+    @Select("select * from account")
+    Page<Account> selectAccounts();
 }
